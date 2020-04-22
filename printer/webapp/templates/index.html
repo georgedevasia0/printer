@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-
-{% load static %}
 <html lang="en">
+    {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta content="" name="descriptison">
@@ -23,7 +22,7 @@
     <link href="{% static '/vendor/aos/aos.css' %}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="{% static '/css/style.css' %}" rel="stylesheet">
+    <link href="{% static '/css/style.css' %}"rel="stylesheet">
 
 
     <title>Document</title>
@@ -83,7 +82,7 @@
                 <div class="carousel-inner" role="listbox">
 
                     <!-- Slide 1 -->
-                    <div class="carousel-item active" style="background-image: url("{% static 'img/slide/slide-1.jpg' %}");">
+                    <div class="carousel-item" style="background-image: url('static/img/slide/slide-1.jpg');">
                         <div class="carousel-container">
                             <div class="carousel-content container">
                                 <h2 class="animated fadeInDown">Welcome to <span>Mamba</span></h2>
@@ -98,7 +97,7 @@
                     </div>
 
                     <!-- Slide 2 -->
-                    <div class="carousel-item" style="background-image: url("{% static 'assets/img/slide/slide-2.jpg' %}");">
+                    <div class="carousel-item" style="background-image: url('static/img/slide/slide-2.jpg');">
                         <div class="carousel-container">
                             <div class="carousel-content container">
                                 <h2 class="animated fadeInDown">Lorem Ipsum Dolor</h2>
@@ -113,7 +112,7 @@
                     </div>
 
                     <!-- Slide 3 -->
-                    <div class="carousel-item" style="background-image: url("{% static 'assets/img/slide/slide-3.jpg' %}");">
+                    <div class="carousel-item" style="background-image: url('static/img/slide/slide-3.jpg');">
                         <div class="carousel-container">
                             <div class="carousel-content container">
                                 <h2 class="animated fadeInDown">Sequi ea ut et est quaerat</h2>
@@ -145,7 +144,7 @@
     <section id="topbar" class="d-none d-lg-block">
         <div class="container clearfix">
             <div class="contact-info float-left">
-                <i class="icofont-envelope"></i><a href="mailto:contact@example.com">contact@example.com</a>
+                <i class="icofont-envelope"></i><a href="mailto:contact@example.com">abc@gmail.com</a>
                 <i class="icofont-phone"></i> +1 5589 55488 55
             </div>
             <div class="social-links float-right">
@@ -220,7 +219,7 @@
                                     <div class="thumb-content">
                                         <!-- <div class="price">$200</div> -->
                                         <a href="single.html">
-                                            <img class="card-img-top img-fluid" src="{% static 'images/products/products-1.jpg' %}"
+                                            <img class="card-img-top img-fluid" src="{% static 'images/products/products-2.jpg' %}"
                                                 alt="Card image cap">
                                         </a>
                                     </div>
@@ -257,7 +256,7 @@
                                     <div class="thumb-content">
                                         <!-- <div class="price">$200</div> -->
                                         <a href="single.html">
-                                            <img class="card-img-top img-fluid" src="{% static 'images/products/products-1.jpg' %}"
+                                            <img class="card-img-top img-fluid" src="{% static 'images/products/products-3.jpg' %}"
                                                 alt="Card image cap">
                                         </a>
                                     </div>
@@ -294,7 +293,7 @@
                                     <div class="thumb-content">
                                         <!-- <div class="price">$200</div> -->
                                         <a href="single.html">
-                                            <img class="card-img-top img-fluid" src="{% static 'images/products/products-1.jpg' %}"
+                                            <img class="card-img-top img-fluid" src="{% static 'images/products/products-2.jpg' %}"
                                                 alt="Card image cap">
                                         </a>
                                     </div>
@@ -330,6 +329,22 @@
         </div>
     </section>
 
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+        <div class="container">
+            <h3 class="pb-5 text-dark font-weight-bold">Our Clients</h3>
+
+            <div class="row ml-5">
+                {% for client in clients %}
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center">
+                    <img src="{{ client }}" class="img-fluid" alt="">
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </section><!-- End Clients Section -->
+
     <!-- ======= Portfolio Section ======= -->
     <section id="work" class="portfolio-mf sect-pt4 route m-3">
         <div class="container">
@@ -347,7 +362,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="work-box">
-                            <a href="assets/img/work-1.jpg" data-gall="portfolioGallery" class="venobox">
+                            <a href="{%static '/img/work-1.jpg' %}" data-gall="portfolioGallery" class="venobox">
                                 <div class="work-img">
                                     <img src="{%static '/img/work-1.jpg' %}" alt="" class="img-fluid">
                                 </div>
@@ -447,7 +462,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="work-box">
-                            <a href="{%static '/img/work-5.jpg '%}" data-gall="portfolioGallery" class="venobox">
+                            <a href="{%static '/img/work-5.jpg' %}" data-gall="portfolioGallery" class="venobox">
                                 <div class="work-img">
                                     <img src="{%static '/img/work-5.jpg' %}" alt="" class="img-fluid">
                                 </div>
@@ -472,9 +487,9 @@
                     </div>
                     <div class="col-md-4">
                         <div class="work-box">
-                            <a href="assets/img/work-6.jpg" data-gall="portfolioGallery" class="venobox">
+                            <a href="{%static '/img/work-6.jpg' %}" data-gall="portfolioGallery" class="venobox">
                                 <div class="work-img">
-                                    <img src="{% static '/img/work-6.jpg' %}" alt="" class="img-fluid">
+                                    <img src="{%static '/img/work-6.jpg' %}" alt="" class="img-fluid">
                                 </div>
                                 <div class="work-content">
                                     <div class="row">
@@ -502,6 +517,82 @@
 
 
 
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Bethany</h3>
+                        <p>
+                            A108 Adam Street <br>
+                            New York, NY 535022<br>
+                            United States <br><br>
+                            <strong>Phone:</strong> +1 5589 55488 55<br>
+                            <strong>Email:</strong> info@example.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Join Our Newsletter</h4>
+                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4">
+
+            <div class="mr-md-auto text-center text-md-left">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Foxiton</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    Designed by Foxiton Company
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
 
     <!-- Vendor JS Files -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
@@ -523,7 +614,6 @@
     <script src="{% static 'vendor/venobox/venobox.min.js' %}"></script>
     <!-- Template Main JS File -->
     <script src="{% static 'js/main.js' %}"></script>
-
 
 </body>
 
