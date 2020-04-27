@@ -32,6 +32,11 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'webapp.apps.WebappConfig',
+    'about.apps.AboutConfig',
+    'portfolio',
+    'services',
+    'products.apps.ProductsConfig',
+    'contactus.apps.ContactusConfig',
     'admin.apps.AdminConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',

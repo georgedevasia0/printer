@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from webapp.models import product,services,brands,productImage
+from webapp.models import product,services,brands
 import os
 import json
 # Create your views here.
@@ -10,7 +10,6 @@ def tables(request):
     products=product.objects.all()
     allservices=services.objects.all()
     allbrands=brands.objects.all()
-    allproductimages=productImage.objects.all()
     return render(request,'admin.html',{'products':products,'services':allservices,'brands':allbrands})
 def add(request):
     if request.GET.get('table')=='product':

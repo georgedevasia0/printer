@@ -180,8 +180,8 @@
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" onclick=""><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" onclick="edit('products',{{product.id}}"><i class="icon_check_alt2"></i></a>
-                      <a class="btn btn-danger" onclick="del('products',{{product.id}}"><i class="icon_close_alt2"></i></a>
+                      <a class="btn btn-success" onclick="edit('products',{{product.id}})"><i class="icon_check_alt2"></i></a>
+                      <a class="btn btn-danger" onclick="del('products',{{product.id}})"><i class="icon_close_alt2"></i></a>
                       </div>
                     </td>
                   </tr>
@@ -364,6 +364,9 @@ document.getElementById('brands').style.display="none";
 document.getElementById('services').style.display="none";
 document.getElementById(table).style.display="block";
 value=table;
+}
+function edit(table,id){
+  add(table);
 }
 function add(table){
   modal.style.display="block";
