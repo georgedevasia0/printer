@@ -30,11 +30,15 @@
     <script src="static/vendor/jquery/jquery.min.js"></script>
 </head>
 
+<script>
+    a=[];
+    i=0;
+</script>
 
 <body class="body-wrapper">
     <!-- ======= Header ======= -->
     <div id="header">
-       </div>
+    </div>
     <!-- End Header -->
     <main id="main">
         <!-- ======= Portfolio Section ======= -->
@@ -58,30 +62,30 @@
 
 
                 <div class="row portfolio-container">
-                    {% for product in products%}
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-{{product.brand.brandname}} wow fadeInUp" data-toggle="modal"
-                    data-target="#about">
-                    <div class="portfolio-wrap">
-                        <figure>
-                            <img src="{{product.productimage1}}" class="img-fluid" alt="">
-                            <a href="#" data-gall="portfolioGallery" class="link-preview venobox" title="Preview"><i
-                                    class="ion ion-eye"></i></a>
-                        </figure>
+                    {% for product in products %}
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-{{product.brand.brandname}} wow fadeInUp"
+                        onclick=pop('{{product.id}}') data-toggle="modal" data-target="#about">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <img src="{{product.productimage1}}" class="img-fluid" alt="">
+                                <a href="#" class="link-preview " title="Preview"><i
+                                        class="ion ion-eye"></i></a>
+                            </figure>
 
-                        <div class="portfolio-info">
-                            <h4>{{product.productname}}</h4>
-                            <p>{{product.subtitle}}</p>
+                            <div class="portfolio-info">
+                                <h4>{{product.productname}}</h4>
+                                <p>{{product.subtitle}}</p>
+                            </div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
-            </div>
         </section><!-- End Portfolio Section -->
     </main>
     <!-- ======= Footer ======= -->
     <footer id="footer">
 
-        
+
     </footer><!-- End Footer -->
 
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
@@ -167,13 +171,13 @@
     <script src="static/js/product.js"></script>
     <script src="static/js/main.js"></script>
     <script type='text/javascript'>
-        $(document).ready(function(){
-         $( "#header" ).load( "/static/header.html" );
+        $(document).ready(function () {
+            $("#header").load("/static/header.html");
         });
-        $(document).ready(function(){
-         $( "#footer" ).load( "/static/footer.html" );
+        $(document).ready(function () {
+            $("#footer").load("/static/footer.html");
         });
-       </script>
+    </script>
 </body>
 
 </html>
